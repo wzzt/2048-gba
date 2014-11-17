@@ -73,7 +73,7 @@ int perform_turn()
         return LOSS;
     /* Keeps track in order to detect duplicate moves from the same keypress */
     static int last_dir;
-    int dir;
+    int dir, i;
     dir = NONE;
     do {
         vid_vsync();
@@ -87,6 +87,9 @@ int perform_turn()
         else if (last_dir != get_dir()) /* Ignore holds */
             last_dir = dir = get_dir();
     } while (dir == NONE || !move_field(dir));
+    for (i = 0; i < SLOTS; i++)
+        if (field[i] >= WIN_VAL)
+            return WIN;
     return ONGOING;
 }
 

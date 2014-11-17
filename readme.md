@@ -4,6 +4,7 @@ A simple 2048 clone for the GBA, written in C. Use the arrow keys to play.
 
 # Version History
 
+- 1.01: fixed bug that made winning the game impossible
 - 1.0: first release
 
 # Compiling
