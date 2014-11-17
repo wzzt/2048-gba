@@ -1,3 +1,6 @@
+/*
+ * Declarations for helper functions
+ */
 
 void shuffle_deck();
 int game_status();
